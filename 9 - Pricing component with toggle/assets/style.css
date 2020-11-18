@@ -43,7 +43,7 @@ section .subscribe-period .circle-1{
 section .subscribe-period .circle-2{
     transform: translate(25px, 15%);
 }
-section p {
+section h4, section p {
     margin: 0 24px;
 }
 
