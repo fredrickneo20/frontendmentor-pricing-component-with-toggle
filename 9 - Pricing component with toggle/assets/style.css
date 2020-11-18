@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    
-}
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
@@ -19,7 +16,7 @@ body {
 main{
     width: calc(100% - 195px);
     height: 675px;
-    margin: 25vh auto;
+    margin: auto;
 }
 
 section.subscribe{
