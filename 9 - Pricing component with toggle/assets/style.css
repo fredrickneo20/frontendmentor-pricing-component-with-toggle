@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: hsl(233, 13%, 49%);
+    text-align: center;
+    background-color:hsl(240, 78%, 98%);
+    background-image: url('/images/bg-bottom.svg'),url('/images/bg-top.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, top right;
+}
+main{
+    width: calc(100% - 195px);
+    height: 675px;
+    margin: 25vh auto;
+}
+
+section.subscribe{
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(234, 14%, 74%);
+}
+section .subscribe-period{
+    height: 32px;
+    width: 56px;
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 25px;
+}
+section .subscribe-period .circle-1{
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(5px, 15%);
+    cursor: pointer;
+}
+section .subscribe-period .circle-2{
+    transform: translate(25px, 15%);
+}
+section p {
+    margin: 0 24px;
+}
+
+section.subscribe-plan{
+    height: 500px;
+    margin-top: 66px;
+    display: flex;
+    align-items: center;
+}
+
+.basic{
+    background-color:#fff;
+    height: calc(100% - 50px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.professional{
+    background: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    height: 100%;
+    border-radius: 10px;
+    color: #fff;
+}
+.master{
+    background-color: #fff;
+    height: calc(100% - 50px);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.basic, .professional, .master{
+    width: calc(100% - 195px / 3);
+}
+.basic .basic-plan, .master .master-plan{
+    margin-top: 35px;
+}
+.professional .professional-plan{
+    margin-top: 60px;
+}
+.basic p.price, .professional p.price, .master p.price{
+    margin: 40px 0px;
+    font-size: 54px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.basic p.price, .master p.price{
+    color: hsl(232, 13%, 33%);
+}
+.basic p.price span, .professional p.price span, .master p.price span{
+    font-size: 32px;
+}
+.basic .feature p, .professional .feature p, .master .feature p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid hsl(234, 14%, 74%);
+}
+.basic .feature p:last-child, .professional .feature p:last-child, .master .feature p:last-child{
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+button{
+    margin-top: 30px;
+    height: 44px;
+    width: calc(100% - 30px);
+    font-family: inherit;
+    font-size: inherit;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #fff;
+}
+.professional button{
+    background: #fff;
+    color: hsl(237, 63%, 64%);
+}
+@media all and (max-width: 995px){
+    section.subscribe-plan{
+        flex-direction: column;       
+    }
+    .basic, .professional, .master{
+        display: flex;
+        width: 100%;
+        height: calc(100% / 3);
+        justify-content: space-around;
+        align-items: center;
+    }
+    .basic-plan, .feature, button, .professional-plan, .master-plan {
+        width: calc(100% / 3);
+    }
+    button{
+        margin-right: 10px;
+    }
+    .basic .feature p, .professional .feature p, .master .feature p{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .basic{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    .professional{
+        border-radius: 0px;
+    }
+    .professional .professional-plan{
+        margin-top: 35px;
+    }
+    .master{
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+    .basic p.price, .professional p.price, .master p.price{
+        font-size: 46px;
+    }
+}
+
+@media all and (max-width: 750px){
+    main{
+        width: calc(100% - 12vw);
+        height: 1605px;
+        margin: 25vh auto;
+    }
+    section.subscribe-plan{
+        flex-direction: column;   
+        height: 1430px;    
+    }
+    .basic, .professional, .master{ 
+        min-height: 450px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        display: block;
+        text-align: center;
+    }
+    .basic-plan, .feature, .professional-plan, .master-plan {
+        width: 100%;
+    }
+    button{
+        width: calc(100% - 30px);
+        margin-right: 0;
+    }
+    .basic .feature p, .professional .feature p, .master .feature p{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .basic p.price, .professional p.price, .master p.price{
+        font-size: 54px;
+    }
+}
