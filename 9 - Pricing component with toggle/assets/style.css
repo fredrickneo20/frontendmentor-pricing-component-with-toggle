@@ -16,7 +16,7 @@ body {
 main{
     width: calc(100% - 195px);
     height: 675px;
-    margin: 75px auto;
+    margin: 70px auto;
 }
 
 section.subscribe{
